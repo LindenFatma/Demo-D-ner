@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Demo Döner | Frisch. Knusprig. Goldwert.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Titan+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#start">DEMO <span>DÖNER</span></a>
+
+      <nav>
+        <a href="#start">Start</a>
+        <a href="#speisekarte">Speisekarte</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+        <button class="gold-button" id="nav-order">Bestellen ↗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="start">
+      <div class="hero-content">
+        <p class="eyebrow">✦ FRISCH ZUBEREITET · MIT LIEBE SERVIERT</p>
+        <h1>Ein Biss.<br><em>Demo wert.</em></h1>
+
+        <p class="intro">
+          Saftiges Fleisch, frische Zutaten und knuspriges Brot –
+          einfach richtig guter Döner.
+        </p>
+
+        <a href="#speisekarte" class="gold-button">Speisekarte entdecken ↗</a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="images/döner-hero.jpg"
+          alt="Frisch zubereiteter Döner"
+        >
+        <div class="image-label">
+          <strong>100 % Geschmack</strong>
+          <span>Frisch gemacht. Für dich gemacht.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="speisekarte">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">UNSERE SPEZIALITÄTEN</p>
+          <h2>Guter Geschmack hat ein Zuhause.</h2>
+          <p>Entdecke deine Lieblingsgerichte.</p>
+        </div>
+
+        <div class="categories">
+          <button class="category-button active" data-category="Alle">Alles</button>
+          <button class="category-button" data-category="Döner">Döner</button>
+          <button class="category-button" data-category="Grillgerichte">Grillgerichte</button>
+          <button class="category-button" data-category="Vegetarisch">Vegetarisch</button>
+          <button class="category-button" data-category="Polnische Küche">Polnische Küche</button>
+          <button class="category-button" data-category="Beilagen">Beilagen</button>
+          <button class="category-button" data-category="Getränke">Getränke</button>
+        </div>
+
+        <div class="products" id="product-list"></div>
+      </div>
+    </section>
+
+    <section class="container about" id="ueber-uns">
+      <img
+        src="images/lavas-döner-firin.jpg"
+        alt="Frisch zubereitetes Essen"
+        loading="lazy"
+      >
+
+      <div>
+        <p class="eyebrow">MIT LIEBE ZUBEREITET</p>
+        <h2>Einfach gutes Essen.<br><em>Jeden Tag.</em></h2>
+        <p>
+          Bei Demo Döner stehen frische Zutaten, guter Geschmack
+          und freundlicher Service im Mittelpunkt.
+        </p>
+        <a href="#speisekarte" class="gold-button">Jetzt entdecken</a>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="container">
+        <p class="eyebrow">WIR FREUEN UNS AUF DICH</p>
+        <h2>Hungrig geworden?</h2>
+        <p>Bestelle deine Lieblingsgerichte direkt per WhatsApp.</p>
+        <button class="gold-button" id="contact-order">Jetzt bestellen ↗</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="#start">DEMO <span>DÖNER</span></a>
+      <span>© <span id="year"></span> Demo Döner - Fatma Linden</span>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </footer>
+
+  <button class="cart-toggle" id="cart-toggle">
+    🛒 Warenkorb (<span id="cart-count">0</span>)
+  </button>
+
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Deine Bestellung</h2>
+      <button class="close-cart" id="close-cart" aria-label="Schließen">×</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+      <strong>Gesamt</strong>
+      <strong id="cart-total">0,00 €</strong>
+    </div>
+
+    <label for="customer-name">Dein Name</label>
+    <input id="customer-name" type="text" placeholder="Name eingeben">
+
+    <label for="order-type">Bestellart</label>
+    <select id="order-type">
+      <option value="Abholung">Abholung</option>
+      <option value="Lieferung">Lieferung</option>
+    </select>
+
+    <label for="customer-note">Bemerkungen / Lieferadresse</label>
+    <textarea id="customer-note" placeholder="Deine Nachricht"></textarea>
+
+    <button class="gold-button order-button" id="order-button">
+      Über WhatsApp bestellen ↗
+    </button>
+  </aside>
+</body>
+</html>
